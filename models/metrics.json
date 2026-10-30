@@ -1,0 +1,350 @@
+{
+    "best_model": "XGBoost",
+    "classes": [
+        "Low Risk",
+        "Medium Risk",
+        "High Risk"
+    ],
+    "dataset_rows": 2500,
+    "test_samples": 500,
+    "features": {
+        "numeric": [
+            "loan_amount",
+            "loan_tenor_days",
+            "interest_rate_pct",
+            "applicant_age",
+            "monthly_income",
+            "debt_to_income_ratio",
+            "credit_score_num",
+            "loan_to_income_ratio",
+            "monthly_debt_repayment",
+            "total_interest_amount",
+            "estimated_monthly_installment",
+            "installment_to_income_ratio",
+            "total_debt_service_ratio",
+            "disposable_income_after_loan",
+            "affordability_index",
+            "credit_vulnerability_index"
+        ],
+        "categorical": [
+            "loan_product",
+            "employment_type",
+            "credit_score_band",
+            "state",
+            "channel",
+            "age_group",
+            "income_segment",
+            "tenor_category"
+        ],
+        "all_encoded": [
+            "loan_amount",
+            "loan_tenor_days",
+            "interest_rate_pct",
+            "applicant_age",
+            "monthly_income",
+            "debt_to_income_ratio",
+            "credit_score_num",
+            "loan_to_income_ratio",
+            "monthly_debt_repayment",
+            "total_interest_amount",
+            "estimated_monthly_installment",
+            "installment_to_income_ratio",
+            "total_debt_service_ratio",
+            "disposable_income_after_loan",
+            "affordability_index",
+            "credit_vulnerability_index",
+            "loan_product_Buy Now Pay Later",
+            "loan_product_Personal Loan",
+            "loan_product_SME Loan",
+            "loan_product_Salary Advance",
+            "employment_type_Informal Trader",
+            "employment_type_Salaried",
+            "employment_type_Self-Employed",
+            "employment_type_Student",
+            "credit_score_band_A",
+            "credit_score_band_B",
+            "credit_score_band_C",
+            "credit_score_band_D",
+            "credit_score_band_E",
+            "state_Akwa Ibom",
+            "state_Enugu",
+            "state_FCT",
+            "state_Kaduna",
+            "state_Kano",
+            "state_Lagos",
+            "state_Ogun",
+            "state_Oyo",
+            "state_Rivers",
+            "channel_Agent",
+            "channel_Mobile App",
+            "channel_USSD",
+            "channel_Web",
+            "age_group_18-25",
+            "age_group_26-35",
+            "age_group_36-45",
+            "age_group_46-55",
+            "age_group_56+",
+            "income_segment_High (>\u20a6500k)",
+            "income_segment_Low (<\u20a6100k)",
+            "income_segment_Lower-Middle (\u20a6100k-\u20a6250k)",
+            "income_segment_Middle (\u20a6250k-\u20a6500k)",
+            "tenor_category_Long (>180d)",
+            "tenor_category_Medium (91-180d)",
+            "tenor_category_Short (31-90d)",
+            "tenor_category_Ultra-Short (<=30d)"
+        ]
+    },
+    "hyperparameter_tuning": {
+        "technique": "GridSearchCV with 3-Fold Stratified Cross-Validation",
+        "scoring": "Stratified Classification Accuracy",
+        "rf_best_params": {
+            "class_weight": "balanced",
+            "max_depth": 10,
+            "min_samples_leaf": 1,
+            "min_samples_split": 4,
+            "n_estimators": 100
+        },
+        "rf_cv_score": 0.9575,
+        "xgb_best_params": {
+            "colsample_bytree": 0.85,
+            "learning_rate": 0.08,
+            "max_depth": 6,
+            "n_estimators": 100,
+            "reg_lambda": 1.0,
+            "subsample": 0.85
+        },
+        "xgb_cv_score": 0.9555
+    },
+    "random_forest": {
+        "accuracy": 0.948,
+        "precision": 0.9501,
+        "recall": 0.948,
+        "f1_score": 0.9486,
+        "auc_roc": 0.9959,
+        "binary_auc": 0.9981,
+        "confusion_matrix": [
+            [
+                249,
+                13,
+                0
+            ],
+            [
+                3,
+                82,
+                7
+            ],
+            [
+                0,
+                3,
+                143
+            ]
+        ],
+        "classification_report": {
+            "Low Risk": {
+                "precision": 0.9880952380952381,
+                "recall": 0.950381679389313,
+                "f1-score": 0.9688715953307393,
+                "support": 262.0
+            },
+            "Medium Risk": {
+                "precision": 0.8367346938775511,
+                "recall": 0.8913043478260869,
+                "f1-score": 0.8631578947368421,
+                "support": 92.0
+            },
+            "High Risk": {
+                "precision": 0.9533333333333334,
+                "recall": 0.9794520547945206,
+                "f1-score": 0.9662162162162162,
+                "support": 146.0
+            },
+            "accuracy": 0.948,
+            "macro avg": {
+                "precision": 0.9260544217687076,
+                "recall": 0.9403793606699735,
+                "f1-score": 0.9327485687612659,
+                "support": 500.0
+            },
+            "weighted avg": {
+                "precision": 0.9500944217687075,
+                "recall": 0.948,
+                "f1-score": 0.9486449037200216,
+                "support": 500.0
+            }
+        }
+    },
+    "xgboost": {
+        "accuracy": 0.952,
+        "precision": 0.9512,
+        "recall": 0.952,
+        "f1_score": 0.9512,
+        "auc_roc": 0.9957,
+        "binary_auc": 0.998,
+        "confusion_matrix": [
+            [
+                256,
+                6,
+                0
+            ],
+            [
+                8,
+                76,
+                8
+            ],
+            [
+                0,
+                2,
+                144
+            ]
+        ],
+        "classification_report": {
+            "Low Risk": {
+                "precision": 0.9696969696969697,
+                "recall": 0.9770992366412213,
+                "f1-score": 0.973384030418251,
+                "support": 262.0
+            },
+            "Medium Risk": {
+                "precision": 0.9047619047619048,
+                "recall": 0.8260869565217391,
+                "f1-score": 0.8636363636363636,
+                "support": 92.0
+            },
+            "High Risk": {
+                "precision": 0.9473684210526315,
+                "recall": 0.9863013698630136,
+                "f1-score": 0.9664429530201343,
+                "support": 146.0
+            },
+            "accuracy": 0.952,
+            "macro avg": {
+                "precision": 0.9406090985038352,
+                "recall": 0.9298291876753247,
+                "f1-score": 0.9344877823582496,
+                "support": 500.0
+            },
+            "weighted avg": {
+                "precision": 0.951228981544771,
+                "recall": 0.952,
+                "f1-score": 0.9511636651301336,
+                "support": 500.0
+            }
+        }
+    },
+    "feature_importance": {
+        "random_forest": {
+            "credit_vulnerability_index": 0.18220117444999814,
+            "credit_score_num": 0.13613348466063593,
+            "total_debt_service_ratio": 0.12018173171585805,
+            "debt_to_income_ratio": 0.11285309586650624,
+            "disposable_income_after_loan": 0.09586225590093476,
+            "affordability_index": 0.07188188396821288,
+            "installment_to_income_ratio": 0.05116859239870433,
+            "credit_score_band_D": 0.03149979826573455,
+            "credit_score_band_C": 0.031211281332020557,
+            "monthly_debt_repayment": 0.02246682966068809,
+            "estimated_monthly_installment": 0.018111255621447785,
+            "credit_score_band_B": 0.016827483052427587,
+            "loan_to_income_ratio": 0.014288126265445407,
+            "credit_score_band_A": 0.013290302680986566,
+            "loan_tenor_days": 0.010630361126679698,
+            "credit_score_band_E": 0.009255539937651389,
+            "monthly_income": 0.00825644736465673,
+            "total_interest_amount": 0.006346420415957924,
+            "interest_rate_pct": 0.006093558714235281,
+            "applicant_age": 0.006033985930504569,
+            "loan_amount": 0.005945995896474361,
+            "tenor_category_Long (>180d)": 0.002284189931550612,
+            "employment_type_Salaried": 0.0018563875656745473,
+            "income_segment_Low (<\u20a6100k)": 0.0017939451036085286,
+            "tenor_category_Ultra-Short (<=30d)": 0.0017271855334543968,
+            "channel_Mobile App": 0.001239816480315432,
+            "employment_type_Self-Employed": 0.0011299428186505923,
+            "tenor_category_Short (31-90d)": 0.0010463801627757661,
+            "loan_product_Personal Loan": 0.001031979946794233,
+            "employment_type_Informal Trader": 0.0010204482293234597,
+            "income_segment_Lower-Middle (\u20a6100k-\u20a6250k)": 0.0009553399958231589,
+            "age_group_26-35": 0.0009044319750110503,
+            "employment_type_Student": 0.0008920868503958014,
+            "tenor_category_Medium (91-180d)": 0.0008779954520516351,
+            "loan_product_Buy Now Pay Later": 0.0008555161334429363,
+            "age_group_46-55": 0.0008431164557895121,
+            "age_group_18-25": 0.0008231039634776806,
+            "channel_Web": 0.0008133004433848299,
+            "age_group_36-45": 0.0007831935904610629,
+            "state_Enugu": 0.0007640384898690955,
+            "income_segment_Middle (\u20a6250k-\u20a6500k)": 0.0007130428266712091,
+            "state_Ogun": 0.0006840062604675422,
+            "state_Kaduna": 0.000681981630584934,
+            "age_group_56+": 0.0006269755496228942,
+            "state_Oyo": 0.0006187615361864299,
+            "state_Rivers": 0.0005979058093649429,
+            "channel_USSD": 0.0005737874091800582,
+            "income_segment_High (>\u20a6500k)": 0.0005253059993226074,
+            "loan_product_Salary Advance": 0.0005194806136512442,
+            "loan_product_SME Loan": 0.0004946414576719776,
+            "state_FCT": 0.0004506182643304418,
+            "state_Akwa Ibom": 0.00037615014827019176,
+            "channel_Agent": 0.00035373301661839325,
+            "state_Lagos": 0.0003507140380078426,
+            "state_Kano": 0.0002508910924340318
+        },
+        "xgboost": {
+            "credit_score_band_C": 0.15572093427181244,
+            "total_debt_service_ratio": 0.14491070806980133,
+            "credit_vulnerability_index": 0.13038264214992523,
+            "credit_score_band_A": 0.08471963554620743,
+            "installment_to_income_ratio": 0.06093142181634903,
+            "debt_to_income_ratio": 0.046211112290620804,
+            "credit_score_band_D": 0.03983110189437866,
+            "disposable_income_after_loan": 0.03486884385347366,
+            "credit_score_num": 0.03375590220093727,
+            "credit_score_band_E": 0.02401699870824814,
+            "employment_type_Salaried": 0.015485125593841076,
+            "affordability_index": 0.012354977428913116,
+            "employment_type_Student": 0.010626970790326595,
+            "credit_score_band_B": 0.010235559195280075,
+            "monthly_debt_repayment": 0.009556861594319344,
+            "employment_type_Self-Employed": 0.008206023834645748,
+            "estimated_monthly_installment": 0.008042910136282444,
+            "monthly_income": 0.007587328553199768,
+            "state_Enugu": 0.007583189755678177,
+            "channel_Web": 0.007517924066632986,
+            "loan_amount": 0.0073297712951898575,
+            "tenor_category_Ultra-Short (<=30d)": 0.006956880912184715,
+            "channel_Mobile App": 0.006607464514672756,
+            "loan_product_Salary Advance": 0.00658768555149436,
+            "interest_rate_pct": 0.0060364012606441975,
+            "state_Oyo": 0.006010117940604687,
+            "tenor_category_Short (31-90d)": 0.00574854901060462,
+            "state_Kano": 0.00566753838211298,
+            "channel_Agent": 0.0055849868804216385,
+            "employment_type_Informal Trader": 0.005539204925298691,
+            "loan_product_Buy Now Pay Later": 0.0054631405510008335,
+            "state_Rivers": 0.005289493128657341,
+            "loan_to_income_ratio": 0.005279328674077988,
+            "applicant_age": 0.005237003788352013,
+            "total_interest_amount": 0.005023162811994553,
+            "channel_USSD": 0.004958209116011858,
+            "state_FCT": 0.004804351832717657,
+            "income_segment_Lower-Middle (\u20a6100k-\u20a6250k)": 0.004716445691883564,
+            "loan_tenor_days": 0.004627139773219824,
+            "state_Kaduna": 0.004620215855538845,
+            "state_Ogun": 0.004207910038530827,
+            "age_group_26-35": 0.0039529879577457905,
+            "age_group_36-45": 0.003847054671496153,
+            "age_group_46-55": 0.00360630895011127,
+            "state_Lagos": 0.003377045039087534,
+            "age_group_18-25": 0.0031536512542515993,
+            "loan_product_Personal Loan": 0.003088013269007206,
+            "income_segment_Middle (\u20a6250k-\u20a6500k)": 0.0026983292773365974,
+            "state_Akwa Ibom": 0.0025330919306725264,
+            "tenor_category_Medium (91-180d)": 0.0024556221906095743,
+            "loan_product_SME Loan": 0.0017563891597092152,
+            "age_group_56+": 0.0006903676548972726,
+            "income_segment_High (>\u20a6500k)": 0.0,
+            "income_segment_Low (<\u20a6100k)": 0.0,
+            "tenor_category_Long (>180d)": 0.0
+        }
+    }
+}

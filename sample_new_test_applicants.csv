@@ -1,0 +1,16 @@
+applicant_id,applicant_name,loan_product,loan_amount,loan_tenor_days,interest_rate_pct,applicant_age,employment_type,monthly_income,debt_to_income_ratio,credit_score_band,state,channel
+NEW-001,Aniefiok Bassey,Salary Advance,180000,30,9.0,33,Salaried,480000,16.5,A,Akwa Ibom,Mobile App
+NEW-002,Udeme Okon,SME Loan,500000,90,16.0,40,Self-Employed,360000,38.0,B,Akwa Ibom,Web
+NEW-003,Ime Archibong,Personal Loan,650000,60,22.0,29,Informal Trader,110000,55.0,E,Akwa Ibom,USSD
+NEW-004,Ibrahim Danjuma,Salary Advance,150000,30,8.5,34,Salaried,520000,14.0,A,Lagos,Mobile App
+NEW-005,Ngozi Eze,SME Loan,600000,90,16.0,41,Self-Employed,380000,42.0,B,Enugu,Web
+NEW-006,Emeka Okonkwo,Personal Loan,450000,60,24.0,28,Self-Employed,120000,58.5,E,Rivers,USSD
+NEW-007,Folake Adebayo,Buy Now Pay Later,220000,30,12.0,36,Salaried,350000,22.0,A,Oyo,Agent
+NEW-008,Babatunde Fashina,Personal Loan,300000,90,18.0,31,Salaried,220000,28.0,C,Lagos,Mobile App
+NEW-009,Fatima Abdullahi,SME Loan,800000,180,15.0,45,Self-Employed,650000,20.0,A,FCT,Web
+NEW-010,Chiamaka Nnamdi,Buy Now Pay Later,85000,14,10.0,24,Student,65000,15.0,C,Enugu,Mobile App
+NEW-011,Mfonobong Ekpo,Salary Advance,250000,30,8.0,38,Salaried,750000,18.0,A,Akwa Ibom,Mobile App
+NEW-012,Yakubu Garba,Personal Loan,200000,60,22.0,35,Informal Trader,95000,48.0,D,Kano,USSD
+NEW-013,Ekaette Akpan,Buy Now Pay Later,120000,30,11.5,27,Salaried,280000,21.0,B,Akwa Ibom,Web
+NEW-014,Segun Alabi,SME Loan,1200000,180,20.0,44,Self-Employed,420000,52.0,D,Ogun,Agent
+NEW-015,Zainab Bello,Salary Advance,100000,15,7.5,30,Salaried,310000,12.0,A,Kaduna,Mobile App
